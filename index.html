@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10110f" />
+  <title>觀易 — 梅花易數</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="觀易首頁"><span class="brand-mark">易</span><span class="brand-name">觀易</span></a>
+    <span class="taiji-mark" aria-label="太極" role="img">☯</span>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span>梅花易數</span><i></i> 數字起卦</p><h1>在變化之中，<br><em>看見此刻的方向。</em></h1></div>
+    </section>
+    <section class="workspace" id="cast">
+      <div class="section-heading"><div><h2>以數起卦</h2></div></div>
+      <form class="cast-card" id="cast-form">
+        <div class="numbers-grid">
+          <label class="number-field"><span class="field-label"><b>上卦數</b><small>第一個直覺數字</small></span><span class="input-wrap"><input id="upper" type="number" inputmode="numeric" min="1" max="9999" placeholder="例如 15" required><span class="input-index">01</span></span></label>
+          <label class="number-field"><span class="field-label"><b>下卦數</b><small>第二個直覺數字</small></span><span class="input-wrap"><input id="lower" type="number" inputmode="numeric" min="1" max="9999" placeholder="例如 8" required><span class="input-index">02</span></span></label>
+          <label class="number-field"><span class="field-label"><b>動爻數</b><small>決定變化的位置</small></span><span class="input-wrap"><input id="moving" type="number" inputmode="numeric" min="1" max="9999" placeholder="例如 3" required><span class="input-index">03</span></span></label>
+          <label class="number-field question-field"><span class="field-label"><b>心中所問</b><small>聚焦一件最在意的事</small></span><span class="input-wrap"><input id="question" type="text" maxlength="80" placeholder="例如：這次轉職適合我嗎？"><span class="input-index">✳</span></span></label>
+        </div>
+        <div class="form-bottom"><div class="actions"><button class="primary-button" type="submit">起一卦 <span>↗</span></button><button class="clear-button" id="clear" type="reset">重新輸入</button></div></div>
+      </form>
+    </section>
+    <section class="result-section hidden" id="result" aria-live="polite"></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
